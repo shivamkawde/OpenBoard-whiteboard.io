@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <button onclick="chageClr(this)" id="yellow" value="yellow"></button><br>
+        <button onclick="chageClr(this)" id="green" value="green"></button>
+        <button onclick="chageClr(this)" id="black" value="black"></button>
+        <button onclick="chageClr(this) " id="red" value="red"></button>
+        <button onclick="chageClr(this) " id="blue" value="blue"></button>
+        <button id="undo"> <i class="fa fa-undo"></i> Undo</button>
+        <button id="redo"><i class="fa fa-redo"></i> Redo</button>
+        <button id="clear"> &#10060 Clear</button>
+        <button id="eleser">&#9634 Eraser</button>
+        <button id="pen">&#9998 pen</button>
+        <label id="val" for="vol" style="color: white; margin-left: 7px;">
+            <h3>Pen size</h3>
+        </label>
+        <input id="range" type="range" min="1" max="100" value="3" oninput="penwidth(this.value)">
+        <label for="favcolor" style="color: white; margin-left: 7px;" id="morecolr">
+            <h3>More colors:</h3>
+        </label>
+        <input type="color" id="favcolor" style="color: white; margin-top: 20px; " oninput="chageClr(this)"
+            name=favcolor value="#ff0000">
+        <button id="save">&#8681 save</button>
+        <button style="display:block;width:50px; height:57px; margin-left: 3px; font-size: 12px; "
+            onclick="document.getElementById('getFile').click()"><i class="material-icons"
+                style="font-size: 20px; color: green;">&#xe39d;</i>Open File </button>
+        <input type='file' id="getFile" style="display:none">
+        <button id="line">&#915 Line</button>
+         <!-- <button id="zoomin">zoom in</button>
+         <button id="zoomout">zoom out</button> -->
+    </div>
+
+
+    <canvas class="canvas" id="canV" height="" width=""></canvas>
+    <script src="changeColor.js"></script>
+    <script src="events.js"></script>
+    <script src="penLine.js"></script>
+    <script src="rubcanvas.js"></script>
+    <script src="undoRedo_Clear.js"></script>
+    <script src="save.js"></script>
+    <script src="openFile.js"></script>
+</body>
+</html>
