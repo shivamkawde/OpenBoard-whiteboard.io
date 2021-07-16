@@ -1,7 +1,8 @@
 let canvas=document.querySelector(".canvas");
 var ctx = canvas.getContext('2d');
-canvas.width=window.innerWidth;
-canvas.height=550;
+canvas.width=window.innerWidth-10;
+canvas.height=520;
+
 
 let background="white";
 ctx.fillStyle=background;
